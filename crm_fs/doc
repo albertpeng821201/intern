@@ -1,2 +1,9 @@
-20190903-testing 3 tile if the false sharing happen
+20190906-C0C3 write C1 local not work as well. the reason maybe because too much variable which is unuse.
+	 C3 get the invalidation too early cuz the FS not happened
+	-test2 write on first 4 word in the same cache line each tile two word. trigger too much time of force write change
+20190905-false sharing test, C0 C2 write data in the time period , C1 is the local
+	-false sharing happen in some way but still not working
+20190904-tesing 1 tile if the false sharing is happened
+	-testing 3 tile 2 tiles write data to another tile the data still maintain coherence.
+20190903-testing 3 tile two tile writes one get the data FS is not happened
 20190902-testing with 2 tiles and inv-managerment
